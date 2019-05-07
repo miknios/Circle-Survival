@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputManager : MonoBehaviour
+public class InputController : MonoBehaviour
 {
     void Update()
     {
@@ -19,7 +19,7 @@ public class InputManager : MonoBehaviour
 
                 if (bomb != null)
                 {
-                    var bombBehaviour = bomb.gameObject.GetComponent<BombBehaviour>();
+                    var bombBehaviour = bomb.gameObject.GetComponent<BombController>();
                     bombBehaviour.OnTouch.Invoke();
                 }
             }

@@ -4,25 +4,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SpawnBombs : MonoBehaviour
+public class SpawnManager : MonoBehaviour
 {
     [SerializeField]
-    GameObject greenBombPrefab;
-    [SerializeField]
-    GameObject blackBombPrefab;
-    [SerializeField]
-    float minExplodeTime = 2;
-    [SerializeField]
-    float maxExplodeTime = 4;
-    [SerializeField]
-    float spawnTime = 1;
-    [SerializeField]
-    float spawnTimer;
+    float spawnTimer = 0;
+    GameManager gameManager;
+    BombPool bombPool;
+
+    private void Start()
+    {
+        gameManager = GetComponent<GameManager>();
+        bombPool = GetComponent<BombPool>();
+    }
 
     void Update()
     {
         spawnTimer += Time.deltaTime;
-        if(spawnTimer > spawnTime)
+        if(spawnTimer > gameManager.SpawnTime)
         {
             spawnTimer = 0;
             SpawnBomb();
@@ -31,11 +29,14 @@ public class SpawnBombs : MonoBehaviour
 
     private void SpawnBomb()
     {
-        GameObject bombToInst = UnityEngine.Random.Range(0f, 1f) > 0.1 ? 
-            greenBombPrefab : blackBombPrefab;
+        BombPool.Bombs whichBomb = UnityEngine.Random.Range(0f, 1f) > 0.1 ? 
+            BombPool.Bombs.GREEN : BombPool.Bombs.BLACK;
+        GameObject bombToSpawn = bombPool.Get(whichBomb);
+        if (bombToSpawn == null)
+            return;
         float xPos;
         float yPos;
-        float explodeTime = UnityEngine.Random.Range(minExplodeTime, maxExplodeTime);
+        float explodeTime = UnityEngine.Random.Range(gameManager.MinExplodeTime, gameManager.MaxExplodeTime);
         bool spaceClear;
         do
         {
@@ -48,7 +49,8 @@ public class SpawnBombs : MonoBehaviour
             spaceClear = Physics2D.OverlapCircle(new Vector2(xPos, yPos), 0.5f, 1 << 8) == null;
         } while (!spaceClear);
 
-        bombToInst.GetComponent<BombBehaviour>().explodeTime = explodeTime;
-        Instantiate(bombToInst, new Vector3(xPos, yPos), Quaternion.identity);
+        bombToSpawn.transform.position = new Vector2(xPos, yPos);
+        bombToSpawn.GetComponent<BombController>().explodeTime = explodeTime;
+        bombToSpawn.SetActive(true);
     }
 }

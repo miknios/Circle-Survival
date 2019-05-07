@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BombBehaviour : MonoBehaviour
+public class BombController : MonoBehaviour
 {
+    GameManager gameManager;
+
     [SerializeField]
     public float explodeTime;
     [SerializeField]
     float timer;
     [SerializeField]
-    UnityEvent OnTimerEnd;
+    public UnityEvent OnTimerEnd;
     [SerializeField]
     public UnityEvent OnTouch;
     SpriteMask timerMask;
@@ -18,6 +20,7 @@ public class BombBehaviour : MonoBehaviour
 
     void Start()
     {
+        gameManager = gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         timerMask = GetComponentInChildren<SpriteMask>();
     }
 
@@ -45,15 +48,19 @@ public class BombBehaviour : MonoBehaviour
     {
         //TODO tutaj jakas animacja wyjebania bomby
         gameObject.SetActive(false);
-        //Destroy(this);
+        Reset();
     }
 
     public void Explode()
     {
         //TODO tutaj jakas animacja wybuchu czy cos
-        exploded = true;
-        //gameObject.SetActive(false);
-        //Destroy(this);
         Debug.Log("Bomb exploded!. You lost.");
+        gameManager.EndGame();
+    }
+
+    void Reset()
+    {
+        timer = 0;
+        SetMask(0);
     }
 }
