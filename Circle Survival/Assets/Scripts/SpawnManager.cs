@@ -19,11 +19,14 @@ public class SpawnManager : MonoBehaviour
 
     void Update()
     {
-        spawnTimer += Time.deltaTime;
-        if(spawnTimer > gameManager.SpawnTime)
+        if (gameManager.GameRunning)
         {
-            spawnTimer = 0;
-            SpawnBomb();
+            spawnTimer += Time.deltaTime;
+            if(spawnTimer > gameManager.SpawnTime)
+            {
+                spawnTimer = 0;
+                SpawnBomb();
+            }
         }
     }
 

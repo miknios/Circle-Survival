@@ -17,7 +17,7 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
-        if (gameManager.GameOn) {
+        if (gameManager.GameRunning) {
             scoreTimer += Time.deltaTime;
             if (scoreTimer >= 1)
             {

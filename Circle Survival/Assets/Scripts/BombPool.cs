@@ -7,7 +7,7 @@ public class Pool
 {
     public GameObject prefab;
     public int poolSize;
-    public List<GameObject> objectList;
+    public GameObject[] objects;
 }
 
 public class BombPool : MonoBehaviour
@@ -20,24 +20,24 @@ public class BombPool : MonoBehaviour
 
     void Start()
     {
-        for(int i = 0; i < pools.Length; i++)
+        foreach(Pool pool in pools)
         {
-            var newList = new List<GameObject>();
-            for(int j = 0; j < pools[i].poolSize; j++)
+            GameObject[] newObjects = new GameObject[pool.poolSize];
+            for(int i = 0; i < pool.poolSize; i++)
             {
-                GameObject newBomb = Instantiate(pools[i].prefab);
+                GameObject newBomb = Instantiate(pool.prefab);
                 newBomb.SetActive(false);
-                newList.Add(newBomb);
+                newObjects[i] = newBomb;
             }
-            pools[i].objectList = newList;
+            pool.objects = newObjects;
         }
     }
 
     public GameObject Get(Bombs bombs)
     {
-        List<GameObject> bombPool = pools[(int)bombs].objectList;
+        GameObject[] gameObjects = pools[(int)bombs].objects;
 
-        foreach(GameObject bomb in bombPool)
+        foreach(GameObject bomb in gameObjects)
         {
             if (!bomb.activeInHierarchy)
             {

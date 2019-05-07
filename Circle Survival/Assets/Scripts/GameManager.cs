@@ -10,23 +10,20 @@ using UnityEngine.UI;
 [RequireComponent(typeof(BombPool))]
 public class GameManager : MonoBehaviour
 {
-    [SerializeField]
-    float InitMinExplodeTime = 2;
-    [SerializeField]
-    float InitMaxExplodeTime = 4;
-    [SerializeField]
-    float InitSpawnTime = 1;
-    public int countdownTime = 3;
+    //game initial parameters
+    public float InitMinExplodeTime = 2;
+    public float InitMaxExplodeTime = 4;
+    public float InitSpawnTime = 1;
+    public int CountdownTime = 3;
 
     public float MinExplodeTime;
     public float MaxExplodeTime;
     public float SpawnTime;
-    public bool GameOn;
+    public bool GameRunning;
 
-    public float timer;
     SpawnManager spawnManager;
     InputController inputController;
-    ScoreManager scoreManager;
+    public ScoreManager scoreManager;
 
     private void Awake()
     {
@@ -36,9 +33,7 @@ public class GameManager : MonoBehaviour
         MinExplodeTime = InitMinExplodeTime;
         MaxExplodeTime = InitMaxExplodeTime;
         SpawnTime = InitSpawnTime;
-        spawnManager.enabled = false;
-        inputController.enabled = false;
-        GameOn = false;
+        GameRunning = false;
     }
 
     void Update()
@@ -49,20 +44,18 @@ public class GameManager : MonoBehaviour
     private void UpdateSpawnAndExplodeTimes()
     {
         //TODO ZROBIC TOOOO
+
+
     }
 
     public void StartGame()
     {
-        spawnManager.enabled = true;
-        inputController.enabled = true;
-        GameOn = true;
+        GameRunning = true;
     }
 
     public void EndGame()
     {
-        spawnManager.enabled = false;
-        inputController.enabled = false;
-        GameOn = false;
+        GameRunning = false;
         //TODO tu wywolanie ekranu przegranej
     }
 }

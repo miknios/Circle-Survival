@@ -17,7 +17,7 @@ public class Countdown : MonoBehaviour
 
     IEnumerator StartCountdown()
     {
-        int countdown = gameManager.countdownTime;
+        int countdown = gameManager.CountdownTime;
         for (int i = countdown; i > 0; i--)
         {
             countdownText.text = i.ToString();
