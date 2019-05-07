@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnBombs : MonoBehaviour
 {
@@ -16,38 +17,38 @@ public class SpawnBombs : MonoBehaviour
     [SerializeField]
     float spawnTime = 1;
     [SerializeField]
-    float timer;
-
-    void Start()
-    {
-        
-    }
+    float spawnTimer;
 
     void Update()
     {
-        timer += Time.deltaTime;
-        if(timer > spawnTime)
+        spawnTimer += Time.deltaTime;
+        if(spawnTimer > spawnTime)
         {
-            timer = 0;
+            spawnTimer = 0;
             SpawnBomb();
         }
     }
 
     private void SpawnBomb()
     {
-        float bombRandNum = UnityEngine.Random.Range(0f, 1f);
-        GameObject bombToInst = bombRandNum > 0.1 ? 
+        GameObject bombToInst = UnityEngine.Random.Range(0f, 1f) > 0.1 ? 
             greenBombPrefab : blackBombPrefab;
-        Instantiate(bombToInst);
-        if(bombToInst == greenBombPrefab)
+        float xPos;
+        float yPos;
+        float explodeTime = UnityEngine.Random.Range(minExplodeTime, maxExplodeTime);
+        bool spaceClear;
+        do
         {
-            bombToInst.GetComponent<GreenBombBehaviour>().explodeTime = 
-                UnityEngine.Random.Range(minExplodeTime, maxExplodeTime);
-        }
-        else
-        {
-            bombToInst.GetComponent<BlackBombBehaviour>().explodeTime =
-                UnityEngine.Random.Range(minExplodeTime, maxExplodeTime);
-        }
+            xPos = UnityEngine.Random.Range(
+                Camera.main.ScreenToWorldPoint(Vector2.zero).x + 0.5f, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - 0.5f
+                );
+            yPos = UnityEngine.Random.Range(
+                Camera.main.ScreenToWorldPoint(Vector2.zero).y + 0.5f, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y - 0.5f
+                );
+            spaceClear = Physics2D.OverlapCircle(new Vector2(xPos, yPos), 0.5f, 1 << 8) == null;
+        } while (!spaceClear);
+
+        bombToInst.GetComponent<BombBehaviour>().explodeTime = explodeTime;
+        Instantiate(bombToInst, new Vector3(xPos, yPos), Quaternion.identity);
     }
 }
