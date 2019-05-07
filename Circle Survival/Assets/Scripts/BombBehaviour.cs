@@ -29,11 +29,16 @@ public class BombBehaviour : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        timerMask.alphaCutoff = timer / explodeTime;
+        SetMask(timer / explodeTime);
         if (timer >= explodeTime)
         {
             OnTimerEnd.Invoke();
         }
+    }
+
+    void SetMask(float amount)
+    {
+        timerMask.alphaCutoff = amount;
     }
 
     public void Defuse()
