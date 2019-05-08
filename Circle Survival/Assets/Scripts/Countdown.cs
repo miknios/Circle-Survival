@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Countdown : MonoBehaviour
 {
-    Text countdownText;
+    TextMeshProUGUI countdownText;
 
     public GameParameters GameParameters;
     public IntVariable CountdownTime;
@@ -12,7 +13,7 @@ public class Countdown : MonoBehaviour
 
     void Start()
     {
-        countdownText = GetComponent<Text>();
+        countdownText = GetComponent<TextMeshProUGUI>();
         StartCoroutine(StartCountdown());
     }
 
