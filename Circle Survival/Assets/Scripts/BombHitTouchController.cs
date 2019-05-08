@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class InputController : MonoBehaviour
+public class BombHitTouchController : MonoBehaviour
 {
     void Update()
     {
-        CheckTouches();
+         CheckTouches();
     }
 
     void CheckTouches()
@@ -15,7 +13,7 @@ public class InputController : MonoBehaviour
         {
             if (touch.phase == TouchPhase.Began)
             {
-                var bomb = Physics2D.OverlapCircle(Camera.main.ScreenToWorldPoint(touch.position), 0.1f);
+                var bomb = Physics2D.OverlapCircle(Camera.main.ScreenToWorldPoint(touch.position), 0.1f, 1 << 8);
 
                 if (bomb != null)
                 {

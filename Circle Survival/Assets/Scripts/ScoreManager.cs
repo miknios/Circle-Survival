@@ -1,49 +1,38 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    GameManager gameManager;
-    float scoreTimer = 0;
-    public int Score;
-    public Text scoreText;
-
-    private void Awake()
-    {
-        gameManager = GetComponent<GameManager>();
-    }
+    public GameEvent ScoreChangeEvent;
+    public FloatVariable Timer;
+    public IntVariable Score;
+    public BoolVariable IsHighScore;
 
     void Update()
     {
-        if (gameManager.GameRunning) {
-            scoreTimer += Time.deltaTime;
-            if (scoreTimer >= 1)
-            {
-                scoreTimer = 0;
-                Score++;
-                scoreText.text = Score.ToString();
-            }
+        if ((int)Timer.Value > Score.Value)
+        {
+            Score.Value++;
+            CalculateHighScore();
+            ScoreChangeEvent.Raise();
         }
     }
 
-    //TODO
     public int GetHighScore()
     {
         return PlayerPrefs.GetInt("highscore");
     }
 
-    //TODO
     public void SaveHighScore()
     {
-        if (IsHighScore())
-            PlayerPrefs.SetInt("highscore", Score);
-        PlayerPrefs.Save();
+        if (IsHighScore.Value)
+        {
+            PlayerPrefs.SetInt("highscore", Score.Value);
+            PlayerPrefs.Save();
+        }
     }
 
-    public bool IsHighScore()
+    public void CalculateHighScore()
     {
-        return Score > GetHighScore();
+        IsHighScore.Value = Score.Value > GetHighScore();
     }
 }

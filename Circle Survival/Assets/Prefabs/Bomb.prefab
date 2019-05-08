@@ -91,6 +91,8 @@ GameObject:
   - component: {fileID: 9057647529981054950}
   - component: {fileID: 6751524635793264824}
   - component: {fileID: 6938186087669064290}
+  - component: {fileID: 1886010692573251734}
+  - component: {fileID: -8126244953643630926}
   m_Layer: 8
   m_Name: Bomb
   m_TagString: Untagged
@@ -186,6 +188,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  ExplodeEvent: {fileID: 11400000, guid: 88fb4b5f58d7e3e48bf2b81285c7c369, type: 2}
 --- !u!58 &6938186087669064290
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -202,6 +205,32 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1886010692573251734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9057647529981054968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762b09fb296db1c46a78d3965ed790de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: {fileID: 0}
+--- !u!114 &-8126244953643630926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9057647529981054968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0740a0171e0d1b642ad170fde82ee65b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: {fileID: 0}
 --- !u!1 &9057647530297573620
 GameObject:
   m_ObjectHideFlags: 0

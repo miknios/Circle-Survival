@@ -1,59 +1,51 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    [SerializeField]
-    float spawnTimer = 0;
-    GameManager gameManager;
-    BombPool bombPool;
+    public float SpawnTimer = 0;
 
-    private void Start()
+    public GameParameters GameParameters;
+    public RuntimeSet AvailableGreenBombs;
+    public RuntimeSet AvailableBlackBombs;
+
+    private void Awake()
     {
-        gameManager = GetComponent<GameManager>();
-        bombPool = GetComponent<BombPool>();
+        AvailableBlackBombs.Clear();
+        AvailableGreenBombs.Clear();
     }
 
     void Update()
     {
-        if (gameManager.GameRunning)
+        SpawnTimer += Time.deltaTime;
+        if(SpawnTimer > GameParameters.SpawnTime)
         {
-            spawnTimer += Time.deltaTime;
-            if(spawnTimer > gameManager.SpawnTime)
-            {
-                spawnTimer = 0;
-                SpawnBomb();
-            }
+            SpawnTimer = 0;
+            SpawnBomb();
         }
     }
 
     private void SpawnBomb()
     {
-        BombPool.Bombs whichBomb = UnityEngine.Random.Range(0f, 1f) > 0.1 ? 
-            BombPool.Bombs.GREEN : BombPool.Bombs.BLACK;
-        GameObject bombToSpawn = bombPool.Get(whichBomb);
+        GameObject bombToSpawn = Random.Range(0f, 1f) > 0.1 ? AvailableGreenBombs.Get() : AvailableBlackBombs.Get();
         if (bombToSpawn == null)
             return;
         float xPos;
         float yPos;
-        float explodeTime = UnityEngine.Random.Range(gameManager.MinExplodeTime, gameManager.MaxExplodeTime);
+        float explodeTime = Random.Range(GameParameters.MinExplodeTime, GameParameters.MaxExplodeTime);
         bool spaceClear;
         do
         {
-            xPos = UnityEngine.Random.Range(
+            xPos = Random.Range(
                 Camera.main.ScreenToWorldPoint(Vector2.zero).x + 0.5f, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - 0.5f
                 );
-            yPos = UnityEngine.Random.Range(
+            yPos = Random.Range(
                 Camera.main.ScreenToWorldPoint(Vector2.zero).y + 0.5f, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y - 0.5f
                 );
             spaceClear = Physics2D.OverlapCircle(new Vector2(xPos, yPos), 0.5f, 1 << 8) == null;
         } while (!spaceClear);
 
         bombToSpawn.transform.position = new Vector2(xPos, yPos);
-        bombToSpawn.GetComponent<BombController>().explodeTime = explodeTime;
+        bombToSpawn.GetComponent<BombController>().ExplodeTime = explodeTime;
         bombToSpawn.SetActive(true);
     }
 }

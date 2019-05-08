@@ -1,60 +1,46 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-[RequireComponent(typeof(InputController))]
-[RequireComponent(typeof(ScoreManager))]
-[RequireComponent(typeof(SpawnManager))]
-[RequireComponent(typeof(BombPool))]
 public class GameManager : MonoBehaviour
 {
-    //game initial parameters
-    public float InitMinExplodeTime = 2;
-    public float InitMaxExplodeTime = 4;
-    public float InitSpawnTime = 1;
-    public int CountdownTime = 3;
+    bool gameRunning;
 
-    public float MinExplodeTime;
-    public float MaxExplodeTime;
-    public float SpawnTime;
-    public bool GameRunning;
-    public float timer = 1;
-
-    SpawnManager spawnManager;
-    InputController inputController;
-    public ScoreManager scoreManager;
-    public YouLostUIController youLostManager;
+    public FloatVariable Timer;
+    public IntVariable Score;
+    public BoolVariable IsHighScore;
+    public GameParameters InitialParameters;
+    public GameParameters Parameters;
+    public GameEvent GameStartEvent;
+    public GameEvent GameEndEvent;
+    public GameEvent CountdownEndEvent;
 
     private void Awake()
     {
-        spawnManager = GetComponent<SpawnManager>();
-        inputController = GetComponent<InputController>();
-        scoreManager = GetComponent<ScoreManager>();
-        youLostManager = FindObjectOfType<YouLostUIController>();
-        MinExplodeTime = InitMinExplodeTime;
-        MaxExplodeTime = InitMaxExplodeTime;
-        SpawnTime = InitSpawnTime;
-        GameRunning = false;
+        Parameters.MinExplodeTime = InitialParameters.MinExplodeTime;
+        Parameters.MaxExplodeTime = InitialParameters.MaxExplodeTime;
+        Parameters.SpawnTime = InitialParameters.SpawnTime;
+        IsHighScore.Value = false;
+        Score.Value = 0;
+        Timer.Value = 0;
     }
 
     void Update()
     {
-        if (GameRunning)
+        if (gameRunning)
         {
+            Timer.Value += Time.deltaTime;
             UpdateSpawnAndExplodeTimes();
         }
     }
 
     private void UpdateSpawnAndExplodeTimes()
     {
-        timer += Time.deltaTime;
-        if((int)timer % 2 == 0)
+        
+        if((int)Timer.Value % 2 == 0)
         {
-            MinExplodeTime = (float)GetDiffCurveVal(InitMinExplodeTime, 0.5f, timer);
-            MaxExplodeTime = (float)GetDiffCurveVal(InitMaxExplodeTime, 1f, timer);
-            SpawnTime = (float)GetDiffCurveVal(InitSpawnTime, 0.3f, timer);
+            Parameters.MinExplodeTime = (float)GetDiffCurveVal(InitialParameters.MinExplodeTime, 0.5f, Timer.Value);
+            Parameters.MaxExplodeTime = (float)GetDiffCurveVal(InitialParameters.MaxExplodeTime, 1f, Timer.Value);
+            Parameters.SpawnTime = (float)GetDiffCurveVal(InitialParameters.SpawnTime, 0.3f, Timer.Value);
         }
     }
 
@@ -62,21 +48,21 @@ public class GameManager : MonoBehaviour
     public static double GetDiffCurveVal(double initVal, double minVal, double x)
     {
         double a = initVal - minVal;
-        return initVal - (a - a / Math.Pow(x, 1.0d / 4.0d));
+        return initVal - (a - a / Math.Pow(x, 1.0d / 5.0d));
     }
 
     public void StartGame()
     {
-        GameRunning = true;
+        gameRunning = true;
+        GameStartEvent.Raise();
     }
 
     public void EndGame()
     {
-        GameRunning = false;
-        //TODO tu wywolanie ekranu przegranej
-        scoreManager.scoreText.text = "";
-        youLostManager.SetScore(scoreManager.Score);
-        youLostManager.ShowYouLostScreen(scoreManager.IsHighScore());
-        scoreManager.SaveHighScore();
+        if (gameRunning)
+        {
+            gameRunning = false;
+            GameEndEvent.Raise();
+        }
     }
 }

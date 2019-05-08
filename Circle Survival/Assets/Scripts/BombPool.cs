@@ -1,54 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [System.Serializable]
 public class Pool
 {
-    public GameObject prefab;
-    public int poolSize;
-    public GameObject[] objects;
+    public GameObject Prefab;
+    public int PoolSize;
+    public GameObject[] GameObjects;
 }
 
 public class BombPool : MonoBehaviour
 {
-    public enum Bombs {
-        GREEN = 0, BLACK = 1
-    };
-
-    public Pool[] pools;
+    public Pool[] Pools;
 
     void Start()
     {
-        foreach(Pool pool in pools)
+        foreach(Pool pool in Pools)
         {
-            GameObject[] newObjects = new GameObject[pool.poolSize];
-            for(int i = 0; i < pool.poolSize; i++)
+            GameObject[] newObjects = new GameObject[pool.PoolSize];
+            for(int i = 0; i < pool.PoolSize; i++)
             {
-                GameObject newBomb = Instantiate(pool.prefab);
+                GameObject newBomb = Instantiate(pool.Prefab);
                 newBomb.SetActive(false);
                 newObjects[i] = newBomb;
             }
-            pool.objects = newObjects;
+            pool.GameObjects = newObjects;
         }
     }
-
-    public GameObject Get(Bombs bombs)
-    {
-        GameObject[] gameObjects = pools[(int)bombs].objects;
-
-        foreach(GameObject bomb in gameObjects)
-        {
-            if (!bomb.activeInHierarchy)
-            {
-                return bomb;
-            }
-        }
-
-        return null;
-    }
-
-
 }
 
 

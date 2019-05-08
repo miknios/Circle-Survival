@@ -1,22 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Rotate : MonoBehaviour
 {
-    GameManager gameManager;
-    public float speed;
+    float speed;
 
-    private void Awake()
-    {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-    }
+    public FloatVariable Timer;
 
     void Update()
     {
-        speed = gameManager.timer;
-        //speed = GameManager.GetDiffCurveVal()
-        if (gameManager.GameRunning)
-            transform.Rotate(Vector3.forward * Time.deltaTime * speed);
+        speed = Timer.Value;
+        transform.Rotate(Vector3.forward * Time.deltaTime * speed);
     }
 }

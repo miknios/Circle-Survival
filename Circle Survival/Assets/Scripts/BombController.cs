@@ -1,39 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 public class BombController : MonoBehaviour
 {
-    GameManager gameManager;
-
-    [SerializeField]
-    public float explodeTime;
-    [SerializeField]
-    float timer;
-    [SerializeField]
+    public float ExplodeTime;
+    public float Timer;
     public UnityEvent OnTimerEnd;
-    [SerializeField]
     public UnityEvent OnTouch;
     SpriteMask timerMask;
-    public bool exploded;
 
-    void Start()
+    public GameEvent ExplodeEvent;
+
+    void Awake()
     {
-        gameManager = gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         timerMask = GetComponentInChildren<SpriteMask>();
-    }
-
-    private void OnEnable()
-    {
-        exploded = false;
     }
 
     void Update()
     {
-        timer += Time.deltaTime;
-        SetMask(timer / explodeTime);
-        if (timer >= explodeTime)
+        Timer += Time.deltaTime;
+        SetMask(Timer / ExplodeTime);
+        if (Timer >= ExplodeTime)
         {
             OnTimerEnd.Invoke();
         }
@@ -54,13 +41,12 @@ public class BombController : MonoBehaviour
     public void Explode()
     {
         //TODO tutaj jakas animacja wybuchu czy cos
-        if(gameManager.GameRunning)
-            gameManager.EndGame();
+        ExplodeEvent.Raise();
     }
 
     void Reset()
     {
-        timer = 0;
+        Timer = 0;
         SetMask(0);
     }
 }

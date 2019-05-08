@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class YouLostUIController : MonoBehaviour
@@ -9,14 +7,17 @@ public class YouLostUIController : MonoBehaviour
     public Text ScoreText;
     public Text HighScoreText;
 
+    public IntVariable Score;
+    public BoolVariable IsHighScore;
+
     private void Awake()
     {
         HideYouLostScreen();
     }
 
-    public void SetScore(int score)
+    public void SetScore()
     {
-        ScoreText.text = "Score: " + score;
+        ScoreText.text = "Score: " + Score.Value;
     }
 
     public void HideYouLostScreen()
@@ -26,10 +27,10 @@ public class YouLostUIController : MonoBehaviour
         HighScoreText.enabled = false;
     }
 
-    public void ShowYouLostScreen(bool isHighScore)
+    public void ShowYouLostScreen()
     {
         YouLostText.enabled = true;
         ScoreText.enabled = true;
-        HighScoreText.enabled = isHighScore;
+        HighScoreText.enabled = IsHighScore.Value;
     }
 }
