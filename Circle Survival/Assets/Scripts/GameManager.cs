@@ -29,26 +29,14 @@ public class GameManager : MonoBehaviour
         if (gameRunning)
         {
             Timer.Value += Time.deltaTime;
-            UpdateSpawnAndExplodeTimes();
         }
     }
 
-    private void UpdateSpawnAndExplodeTimes()
+    public void UpdateSpawnAndExplodeTimes()
     {
-        
-        if((int)Timer.Value % 2 == 0)
-        {
-            Parameters.MinExplodeTime = (float)GetDiffCurveVal(InitialParameters.MinExplodeTime, 0.5f, Timer.Value);
-            Parameters.MaxExplodeTime = (float)GetDiffCurveVal(InitialParameters.MaxExplodeTime, 1f, Timer.Value);
-            Parameters.SpawnTime = (float)GetDiffCurveVal(InitialParameters.SpawnTime, 0.3f, Timer.Value);
-        }
-    }
-
-    //TODO zbalansowac wykres trudnosci -- teraz chyba za szybko rosnie na samym poczatku
-    public static double GetDiffCurveVal(double initVal, double minVal, double x)
-    {
-        double a = initVal - minVal;
-        return initVal - (a - a / Math.Pow(x, 1.0d / 5.0d));
+        Parameters.MinExplodeTime = (float)GetDiffCurveVal(InitialParameters.MinExplodeTime, 0.5f, Score.Value);
+        Parameters.MaxExplodeTime = (float)GetDiffCurveVal(InitialParameters.MaxExplodeTime, 1f, Score.Value);
+        Parameters.SpawnTime = (float)GetDiffCurveVal(InitialParameters.SpawnTime, 0.3f, Score.Value);
     }
 
     public void StartGame()
@@ -64,5 +52,12 @@ public class GameManager : MonoBehaviour
             gameRunning = false;
             GameEndEvent.Raise();
         }
+    }
+
+    //TODO zbalansowac wykres trudnosci -- teraz chyba za szybko rosnie na samym poczatku
+    public static double GetDiffCurveVal(double initVal, double minVal, double x)
+    {
+        double a = initVal - minVal;
+        return initVal - (a - a / Math.Pow(x, 1.2));
     }
 }

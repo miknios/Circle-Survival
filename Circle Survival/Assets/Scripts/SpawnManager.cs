@@ -32,14 +32,15 @@ public class SpawnManager : MonoBehaviour
         float xPos;
         float yPos;
         float explodeTime = Random.Range(GameParameters.MinExplodeTime, GameParameters.MaxExplodeTime);
+        float bombSize = bombToSpawn.GetComponent<SpriteRenderer>().bounds.size.x;
         bool spaceClear;
         do
         {
             xPos = Random.Range(
-                Camera.main.ScreenToWorldPoint(Vector2.zero).x + 0.5f, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - 0.5f
+                Camera.main.ScreenToWorldPoint(Vector2.zero).x + bombSize / 2, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - bombSize / 2
                 );
             yPos = Random.Range(
-                Camera.main.ScreenToWorldPoint(Vector2.zero).y + 0.5f, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y - 0.5f
+                Camera.main.ScreenToWorldPoint(Vector2.zero).y + bombSize / 2, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y - bombSize / 2
                 );
             spaceClear = Physics2D.OverlapCircle(new Vector2(xPos, yPos), 0.5f, 1 << 8) == null;
         } while (!spaceClear);
