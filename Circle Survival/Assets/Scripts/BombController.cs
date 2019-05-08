@@ -54,7 +54,6 @@ public class BombController : MonoBehaviour
     public void Explode()
     {
         //TODO tutaj jakas animacja wybuchu czy cos
-        Debug.Log("Bomb exploded!. You lost.");
         gameManager.EndGame();
     }
 

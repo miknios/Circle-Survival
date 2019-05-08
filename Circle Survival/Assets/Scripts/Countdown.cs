@@ -23,7 +23,7 @@ public class Countdown : MonoBehaviour
             countdownText.text = i.ToString();
             yield return new WaitForSecondsRealtime(1);
         }
-        countdownText.text = "GO!";
+        countdownText.text = "GO";
         gameManager.StartGame();
         yield return new WaitForSecondsRealtime(0.5f);
         countdownText.text = "";

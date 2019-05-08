@@ -14,6 +14,6 @@ public class Rotate : MonoBehaviour
     void Update()
     {
         if(gameManager.GameRunning)
-            transform.Rotate(Vector3.forward * gameManager.scoreManager.Score * Time.deltaTime / 2);
+            transform.Rotate(Vector3.forward * Time.deltaTime * (gameManager.scoreManager.Score == 0 ? 1 : gameManager.scoreManager.Score));
     }
 }
