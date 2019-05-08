@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public float MaxExplodeTime;
     public float SpawnTime;
     public bool GameRunning;
-    float timer;
+    public float timer;
 
     SpawnManager spawnManager;
     InputController inputController;
@@ -51,10 +51,19 @@ public class GameManager : MonoBehaviour
         if((int)timer % 2 == 0)
         {
             //TODO uzaleznic kompletnie funkcje od wartosci poczatkowych
-            MinExplodeTime = (float)(InitMinExplodeTime - (2.0d - 2.0d / Math.Pow(timer, 1.0d / 4.0d)));
-            MaxExplodeTime = (float)(InitMaxExplodeTime - (3.0d - 3.0d / Math.Pow(timer, 1.0d / 4.0d)));
-            SpawnTime =      (float)(InitSpawnTime - (0.7d - 0.7d / Math.Pow(timer, 1.0d / 3.0d)));
+            //MinExplodeTime = (float)(InitMinExplodeTime - (2.0d - 2.0d / Math.Pow(timer, 1.0d / 4.0d)));
+            //MaxExplodeTime = (float)(InitMaxExplodeTime - (3.0d - 3.0d / Math.Pow(timer, 1.0d / 4.0d)));
+            //SpawnTime =      (float)(InitSpawnTime - (0.7d - 0.7d / Math.Pow(timer, 1.0d / 4.0d)));
+            MinExplodeTime = (float)GetDiffCurveVal(InitMinExplodeTime, 0.5f, timer);
+            MaxExplodeTime = (float)GetDiffCurveVal(InitMaxExplodeTime, 1f, timer);
+            SpawnTime = (float)GetDiffCurveVal(InitSpawnTime, 0.3f, timer);
         }
+    }
+
+    public static double GetDiffCurveVal(double initVal, double minVal, double x)
+    {
+        double a = initVal - minVal;
+        return initVal - (a - a / Math.Pow(x, 1.0d / 3.0d));
     }
 
     public void StartGame()

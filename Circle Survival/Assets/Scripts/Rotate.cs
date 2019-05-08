@@ -5,6 +5,7 @@ using UnityEngine;
 public class Rotate : MonoBehaviour
 {
     GameManager gameManager;
+    public float speed;
 
     private void Awake()
     {
@@ -13,7 +14,8 @@ public class Rotate : MonoBehaviour
 
     void Update()
     {
-        if(gameManager.GameRunning)
-            transform.Rotate(Vector3.forward * Time.deltaTime * (gameManager.scoreManager.Score == 0 ? 1 : gameManager.scoreManager.Score));
+        speed = gameManager.timer;
+        if (gameManager.GameRunning)
+            transform.Rotate(Vector3.forward * Time.deltaTime * speed);
     }
 }
