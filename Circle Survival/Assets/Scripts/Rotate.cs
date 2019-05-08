@@ -15,6 +15,7 @@ public class Rotate : MonoBehaviour
     void Update()
     {
         speed = gameManager.timer;
+        //speed = GameManager.GetDiffCurveVal()
         if (gameManager.GameRunning)
             transform.Rotate(Vector3.forward * Time.deltaTime * speed);
     }

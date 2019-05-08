@@ -27,4 +27,23 @@ public class ScoreManager : MonoBehaviour
             }
         }
     }
+
+    //TODO
+    public int GetHighScore()
+    {
+        return PlayerPrefs.GetInt("highscore");
+    }
+
+    //TODO
+    public void SaveHighScore()
+    {
+        if (IsHighScore())
+            PlayerPrefs.SetInt("highscore", Score);
+        PlayerPrefs.Save();
+    }
+
+    public bool IsHighScore()
+    {
+        return Score > GetHighScore();
+    }
 }
