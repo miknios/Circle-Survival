@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3edf1234ed3b2445b002eb3710d39a8, type: 3}
-  m_Name: AvailableGreenBombs
+  m_Script: {fileID: 11500000, guid: cd3c1fa8430e78741968e6692b7b7533, type: 3}
+  m_Name: CountdownTime
   m_EditorClassIdentifier: 
-  Items: []
+  DeveloperDescription: Start game countdown time
+  Value: 3

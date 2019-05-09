@@ -89,8 +89,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9057647529981054949}
   - component: {fileID: 9057647529981054950}
-  - component: {fileID: 6751524635793264824}
   - component: {fileID: 6938186087669064290}
+  - component: {fileID: 6751524635793264824}
   - component: {fileID: 1886010692573251734}
   - component: {fileID: -8126244953643630926}
   m_Layer: 8
@@ -164,6 +164,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &6938186087669064290
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9057647529981054968}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!114 &6751524635793264824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,22 +205,6 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   ExplodeEvent: {fileID: 11400000, guid: 88fb4b5f58d7e3e48bf2b81285c7c369, type: 2}
---- !u!58 &6938186087669064290
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9057647529981054968}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &1886010692573251734
 MonoBehaviour:
   m_ObjectHideFlags: 0

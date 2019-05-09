@@ -7,9 +7,15 @@ public class HighscoreTextSetter : MonoBehaviour
 {
     TextMeshProUGUI text;
 
+    public IntVariable HighScore;
+
     private void Awake()
     {
         text = GetComponent<TextMeshProUGUI>();
-        text.text = "Highscore: " + PlayerPrefs.GetInt("highscore", 0);
+    }
+
+    private void Start()
+    {
+        text.text = "Highscore: " + HighScore.Value;
     }
 }

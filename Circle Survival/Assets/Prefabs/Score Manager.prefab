@@ -47,7 +47,7 @@ MonoBehaviour:
   ScoreChangeEvent: {fileID: 11400000, guid: 349892f9add662d48b3e117f18742dc0, type: 2}
   Timer: {fileID: 11400000, guid: e20470005b799d44484a5b70506fcbc7, type: 2}
   Score: {fileID: 11400000, guid: 492b70298b83dae4c970d68ee71c9d77, type: 2}
-  IsHighScore: {fileID: 11400000, guid: bb01c639891873046b277110acbb84d7, type: 2}
+  HighScore: {fileID: 11400000, guid: 2a73037734492324b92ab56467446b22, type: 2}
 --- !u!114 &369643844488335030
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9e2f81035d1bf40a715e935e24b047, type: 3}
   m_Name: GlobalGameTimer
   m_EditorClassIdentifier: 
-  Value: 0
+  DeveloperDescription: 'Game timer
+
+    Score is based on this value'
+  Value: 4.082057

@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
 
     public FloatVariable Timer;
     public IntVariable Score;
-    public BoolVariable IsHighScore;
     public GameParameters InitialParameters;
     public GameParameters Parameters;
     public GameEvent GameStartEvent;
@@ -19,7 +18,6 @@ public class GameManager : MonoBehaviour
         Parameters.MinExplodeTime = InitialParameters.MinExplodeTime;
         Parameters.MaxExplodeTime = InitialParameters.MaxExplodeTime;
         Parameters.SpawnTime = InitialParameters.SpawnTime;
-        IsHighScore.Value = false;
         Score.Value = 0;
         Timer.Value = 0;
     }

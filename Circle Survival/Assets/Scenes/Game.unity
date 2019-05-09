@@ -609,7 +609,7 @@ MonoBehaviour:
   ScoreText: {fileID: 114177243}
   HighScoreText: {fileID: 2036652794}
   Score: {fileID: 11400000, guid: 492b70298b83dae4c970d68ee71c9d77, type: 2}
-  IsHighScore: {fileID: 11400000, guid: bb01c639891873046b277110acbb84d7, type: 2}
+  HighScore: {fileID: 11400000, guid: 2a73037734492324b92ab56467446b22, type: 2}
 --- !u!1001 &1179040128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1082,6 +1082,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 369643844488335028, guid: 6e6bd211ffdde6d45aae005d9a128ed8,
+        type: 3}
+      propertyPath: HighScore
+      value: 
+      objectReference: {fileID: 11400000, guid: 2a73037734492324b92ab56467446b22,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e6bd211ffdde6d45aae005d9a128ed8, type: 3}
 --- !u!1 &1099615860295663190

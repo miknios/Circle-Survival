@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15d2b3291e47696448fb4b4d197acef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTimer: 0
-  GameParameters: {fileID: 0}
+  SpawnTimer: 0
+  GameParameters: {fileID: 11400000, guid: e69a4a520202ae8468a13485fa4b8f9e, type: 2}
   AvailableGreenBombs: {fileID: 11400000, guid: 95aa0cf9d13638143900797f3374f897,
     type: 2}
   AvailableBlackBombs: {fileID: 11400000, guid: 599c61b5db2e69d4d87e8924f48b1326,

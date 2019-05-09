@@ -5,14 +5,18 @@ public class ScoreManager : MonoBehaviour
     public GameEvent ScoreChangeEvent;
     public FloatVariable Timer;
     public IntVariable Score;
-    public BoolVariable IsHighScore;
+    public IntVariable HighScore;
+
+    private void Start()
+    {
+        HighScore.Value = GetHighScore();
+    }
 
     void Update()
     {
         if ((int)Timer.Value > Score.Value)
         {
             Score.Value++;
-            CalculateHighScore();
             ScoreChangeEvent.Raise();
         }
     }
@@ -24,15 +28,22 @@ public class ScoreManager : MonoBehaviour
 
     public void SaveHighScore()
     {
-        if (IsHighScore.Value)
+        SetHighScoreVariable();
+        if (Score.Value > HighScore.Value)
         {
             PlayerPrefs.SetInt("highscore", Score.Value);
             PlayerPrefs.Save();
         }
     }
 
-    public void CalculateHighScore()
+    public void ResetHighScore()
     {
-        IsHighScore.Value = Score.Value > GetHighScore();
+        PlayerPrefs.SetInt("highscore", 0);
+    }
+
+    public void SetHighScoreVariable()
+    {
+        if(Score.Value > GetHighScore())
+            HighScore.Value = Score.Value;
     }
 }

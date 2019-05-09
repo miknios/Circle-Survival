@@ -8,7 +8,7 @@ public class YouLostUIController : MonoBehaviour
     public Text HighScoreText;
 
     public IntVariable Score;
-    public BoolVariable IsHighScore;
+    public IntVariable HighScore;
 
     private void Awake()
     {
@@ -31,6 +31,6 @@ public class YouLostUIController : MonoBehaviour
     {
         YouLostText.enabled = true;
         ScoreText.enabled = true;
-        HighScoreText.enabled = IsHighScore.Value;
+        HighScoreText.enabled = Score.Value > HighScore.Value;
     }
 }
