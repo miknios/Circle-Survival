@@ -28,9 +28,9 @@ public class ScoreManager : MonoBehaviour
 
     public void SaveHighScore()
     {
-        SetHighScoreVariable();
-        if (Score.Value > HighScore.Value)
+        if (Score.Value > GetHighScore())
         {
+            HighScore.Value = Score.Value;
             PlayerPrefs.SetInt("highscore", Score.Value);
             PlayerPrefs.Save();
         }
@@ -39,11 +39,5 @@ public class ScoreManager : MonoBehaviour
     public void ResetHighScore()
     {
         PlayerPrefs.SetInt("highscore", 0);
-    }
-
-    public void SetHighScoreVariable()
-    {
-        if(Score.Value > GetHighScore())
-            HighScore.Value = Score.Value;
     }
 }

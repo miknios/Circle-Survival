@@ -20,51 +20,10 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 1886010692573251734, guid: d04cff6804b4560489ecc2147b671179,
         type: 3}
-      propertyPath: set
-      value: 
-      objectReference: {fileID: 11400000, guid: 95aa0cf9d13638143900797f3374f897,
-        type: 2}
-    - target: {fileID: 1886010692573251734, guid: d04cff6804b4560489ecc2147b671179,
-        type: 3}
       propertyPath: Set
       value: 
       objectReference: {fileID: 11400000, guid: 95aa0cf9d13638143900797f3374f897,
         type: 2}
-    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
-        type: 3}
-      propertyPath: OnTimerEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
-        type: 3}
-      propertyPath: OnTouch.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
-        type: 3}
-      propertyPath: OnTimerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
-        type: 3}
-      propertyPath: OnTimerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
-        type: 3}
-      propertyPath: OnTouch.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
-        type: 3}
-      propertyPath: OnTouch.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
-        type: 3}
-      propertyPath: OnTimerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 8272250993431817922}
     - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
         type: 3}
       propertyPath: OnTimerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -72,23 +31,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
         type: 3}
-      propertyPath: OnTimerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
-        type: 3}
-      propertyPath: OnTouch.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 8272250993431817922}
-    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
-        type: 3}
       propertyPath: OnTouch.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Defuse
-      objectReference: {fileID: 0}
-    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
-        type: 3}
-      propertyPath: OnTouch.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 9057647529981054949, guid: d04cff6804b4560489ecc2147b671179,
         type: 3}
@@ -148,29 +92,17 @@ PrefabInstance:
     - target: {fileID: 9057647529981054950, guid: d04cff6804b4560489ecc2147b671179,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.44648832
+      value: 0.5923682
       objectReference: {fileID: 0}
     - target: {fileID: 9057647529981054950, guid: d04cff6804b4560489ecc2147b671179,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.7830189
+      value: 0.745283
       objectReference: {fileID: 0}
     - target: {fileID: 9057647529981054950, guid: d04cff6804b4560489ecc2147b671179,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.43952474
+      value: 0.19335175
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d04cff6804b4560489ecc2147b671179, type: 3}
---- !u!114 &8272250993431817922 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
-    type: 3}
-  m_PrefabInstance: {fileID: 3422396594180439674}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcee0899f2306d049b239dce8b9b4ba3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

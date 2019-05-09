@@ -26,7 +26,7 @@ public class SpawnManager : MonoBehaviour
 
     private void SpawnBomb()
     {
-        GameObject bombToSpawn = Random.Range(0f, 1f) > 0.1 ? AvailableGreenBombs.Get() : AvailableBlackBombs.Get();
+        GameObject bombToSpawn = Random.Range(0f, 1f) > 0.2 ? AvailableGreenBombs.Get() : AvailableBlackBombs.Get();
         if (bombToSpawn == null)
             return;
         float xPos;
@@ -37,10 +37,10 @@ public class SpawnManager : MonoBehaviour
         do
         {
             xPos = Random.Range(
-                Camera.main.ScreenToWorldPoint(Vector2.zero).x + bombSize / 2, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - bombSize / 2
+                Camera.main.ScreenToWorldPoint(Vector2.zero).x + bombSize / 2.0f, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - bombSize / 2.0f
                 );
             yPos = Random.Range(
-                Camera.main.ScreenToWorldPoint(Vector2.zero).y + bombSize / 2, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y - bombSize / 2
+                Camera.main.ScreenToWorldPoint(Vector2.zero).y + bombSize / 2.0f, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y - bombSize / 2.0f
                 );
             spaceClear = Physics2D.OverlapCircle(new Vector2(xPos, yPos), 0.5f, 1 << 8) == null;
         } while (!spaceClear);

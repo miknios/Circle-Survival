@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class YouLostUIController : MonoBehaviour
 {
-    public Text YouLostText;
-    public Text ScoreText;
-    public Text HighScoreText;
+    public TextMeshProUGUI YouLostText;
+    public TextMeshProUGUI ScoreText;
+    public TextMeshProUGUI HighScoreText;
 
     public IntVariable Score;
     public IntVariable HighScore;

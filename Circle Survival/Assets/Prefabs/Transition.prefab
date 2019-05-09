@@ -233,7 +233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d72ffd3576206224891fb574fa1d7630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionAnimator: {fileID: 0}
 --- !u!114 &1131792576
 MonoBehaviour:
   m_ObjectHideFlags: 0

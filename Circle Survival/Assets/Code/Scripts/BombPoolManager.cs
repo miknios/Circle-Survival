@@ -1,14 +1,6 @@
 ﻿using UnityEngine;
 
-[System.Serializable]
-public class Pool
-{
-    public GameObject Prefab;
-    public int PoolSize;
-    public GameObject[] GameObjects;
-}
-
-public class BombPool : MonoBehaviour
+public class BombPoolManager : MonoBehaviour
 {
     public Pool[] Pools;
 

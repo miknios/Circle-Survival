@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ScoreTextSetter : MonoBehaviour
 {
     public IntVariable Score;
-    Text text;
+    TextMeshProUGUI text;
 
     void Start()
     {
-        text = GetComponent<Text>();
+        text = GetComponent<TextMeshProUGUI>();
     }
 
     public void Set()
