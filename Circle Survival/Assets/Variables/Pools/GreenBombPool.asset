@@ -13,18 +13,8 @@ MonoBehaviour:
   m_Name: GreenBombPool
   m_EditorClassIdentifier: 
   Prefab: {fileID: 5966691033119371650, guid: 1adf353b1d72a5849b26881cf7d8311d, type: 3}
-  PoolSize: 20
+  PoolSize: 10
   GameObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

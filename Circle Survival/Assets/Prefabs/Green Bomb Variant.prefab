@@ -26,12 +26,47 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
         type: 3}
+      propertyPath: OnTouch.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
+        type: 3}
       propertyPath: OnTimerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Explode
       objectReference: {fileID: 0}
     - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
         type: 3}
       propertyPath: OnTouch.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Defuse
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
+        type: 3}
+      propertyPath: OnTouch.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
+        type: 3}
+      propertyPath: OnTouch.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
+        type: 3}
+      propertyPath: OnTouch.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 838172571361903378}
+    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
+        type: 3}
+      propertyPath: OnTouch.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
+        type: 3}
+      propertyPath: OnTouch.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
+        type: 3}
+      propertyPath: OnTouch.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: Defuse
       objectReference: {fileID: 0}
     - target: {fileID: 9057647529981054949, guid: d04cff6804b4560489ecc2147b671179,
@@ -106,3 +141,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d04cff6804b4560489ecc2147b671179, type: 3}
+--- !u!95 &838172571361903378 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2656844583989755240, guid: d04cff6804b4560489ecc2147b671179,
+    type: 3}
+  m_PrefabInstance: {fileID: 3422396594180439674}
+  m_PrefabAsset: {fileID: 0}

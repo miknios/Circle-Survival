@@ -8,6 +8,7 @@ public class BombController : MonoBehaviour
     public UnityEvent OnTimerEnd;
     public UnityEvent OnTouch;
     SpriteMask timerMask;
+    bool timerActive;
 
     public GameEvent ExplodeEvent;
 
@@ -18,11 +19,14 @@ public class BombController : MonoBehaviour
 
     void Update()
     {
-        Timer += Time.deltaTime;
-        SetMask(Timer / ExplodeTime);
-        if (Timer >= ExplodeTime)
+        if (timerActive)
         {
-            OnTimerEnd.Invoke();
+            Timer += Time.deltaTime;
+            SetMask(Timer / ExplodeTime);
+            if (Timer >= ExplodeTime)
+            {
+                OnTimerEnd.Invoke();
+            }
         }
     }
 
@@ -33,9 +37,7 @@ public class BombController : MonoBehaviour
 
     public void Defuse()
     {
-        //TODO tutaj jakas animacja wyjebania bomby
-        gameObject.SetActive(false);
-        Reset();
+        StopTimer();
     }
 
     public void Explode()
@@ -44,9 +46,20 @@ public class BombController : MonoBehaviour
         ExplodeEvent.Raise();
     }
 
+    void StartTimer()
+    {
+        timerActive = true;
+    }
+
+    void StopTimer()
+    {
+        timerActive = false;
+    }
+
     void Reset()
     {
         Timer = 0;
         SetMask(0);
+        gameObject.SetActive(false);
     }
 }

@@ -32,7 +32,11 @@ public class SpawnManager : MonoBehaviour
         float xPos;
         float yPos;
         float explodeTime = Random.Range(GameParameters.MinExplodeTime, GameParameters.MaxExplodeTime);
-        float bombSize = bombToSpawn.GetComponent<SpriteRenderer>().bounds.size.x;
+        //TODO naprawic problem - po skonczeniu animacji bomby zostaje jej rozmiar ~= 0
+        //w tym momencie zhardcodowany bombsize
+        //float bombSize = bombToSpawn.GetComponent<SpriteRenderer>().bounds.size.x;
+        float bombSize = 1.5f;
+        //Debug.Log("Wielkosc bonby: " + bombSize);
         bool spaceClear;
         do
         {

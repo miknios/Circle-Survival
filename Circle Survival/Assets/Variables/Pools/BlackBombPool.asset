@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: BlackBombPool
   m_EditorClassIdentifier: 
   Prefab: {fileID: 9104551414646304348, guid: a09b3da2a5f007d4489ded7c9b796a66, type: 3}
-  PoolSize: 5
+  PoolSize: 7
   GameObjects:
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

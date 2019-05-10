@@ -24,6 +24,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 599c61b5db2e69d4d87e8924f48b1326,
         type: 2}
+    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
+        type: 3}
+      propertyPath: OnTimerEnd.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
+        type: 3}
+      propertyPath: OnTimerEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
+        type: 3}
+      propertyPath: OnTimerEnd.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
+        type: 3}
+      propertyPath: OnTimerEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2825416288259792076}
+    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
+        type: 3}
+      propertyPath: OnTimerEnd.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
+        type: 3}
+      propertyPath: OnTimerEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751524635793264824, guid: d04cff6804b4560489ecc2147b671179,
+        type: 3}
+      propertyPath: OnTimerEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Defuse
+      objectReference: {fileID: 0}
     - target: {fileID: 9057647529981054949, guid: d04cff6804b4560489ecc2147b671179,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -79,5 +114,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9057647529981054950, guid: d04cff6804b4560489ecc2147b671179,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.3207547
+      objectReference: {fileID: 0}
+    - target: {fileID: 9057647529981054950, guid: d04cff6804b4560489ecc2147b671179,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.3207547
+      objectReference: {fileID: 0}
+    - target: {fileID: 9057647529981054950, guid: d04cff6804b4560489ecc2147b671179,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.3207547
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d04cff6804b4560489ecc2147b671179, type: 3}
+--- !u!95 &2825416288259792076 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2656844583989755240, guid: d04cff6804b4560489ecc2147b671179,
+    type: 3}
+  m_PrefabInstance: {fileID: 282292147530686884}
+  m_PrefabAsset: {fileID: 0}

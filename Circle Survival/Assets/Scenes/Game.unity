@@ -901,7 +901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1252109164}
   m_Layer: 0
-  m_Name: '--------GAME LOGIC---------'
+  m_Name: '--------GAME LOGIC--------'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -931,7 +931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1460827342}
   m_Layer: 0
-  m_Name: '----------COSTAM--------'
+  m_Name: '--------VISUAL--------'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
