@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class BombAnimationListener : MonoBehaviour
+//Wywolanie odpowiednich metod BombControllera w zaleznosci od AnimationEventow
+public class BombAnimationEventListener : MonoBehaviour
 {
     BombController bombController;
 

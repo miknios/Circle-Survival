@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+//Ustawia kolor Image na podany
 [RequireComponent(typeof(Image))]
 public class ImageColorSetter : MonoBehaviour
 {

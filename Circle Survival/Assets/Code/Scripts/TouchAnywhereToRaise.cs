@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+//Zbiera dowolny dotyk i podnosi podany GameEvent
 public class TouchAnywhereToRaise : MonoBehaviour
 {
     public GameEvent GameEvent;

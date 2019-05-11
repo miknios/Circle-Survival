@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+//Powiadamianie słuchaczy o zdarzeniu
+//Możliwość dodania i usunięcia słuchacza
 [CreateAssetMenu]
 public class GameEvent : ScriptableObject
 {

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
+//Umożliwia podnoszenie GameEventu z poziomu inspektora
 [CustomEditor(typeof(GameEvent))]
 public class EventEditor : Editor
 {

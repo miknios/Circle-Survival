@@ -1,6 +1,8 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
+//Inicjalizuje poczatkowe ustawienia gry
+//Kontroluje poczatek i koniec gry
+//Kontroluje czas gry
 public class GameManager : MonoBehaviour
 {
     bool gameRunning;
@@ -11,7 +13,6 @@ public class GameManager : MonoBehaviour
     public GameParameters Parameters;
     public GameEvent GameStartEvent;
     public GameEvent GameEndEvent;
-    public GameEvent CountdownEndEvent;
 
     private void Awake()
     {

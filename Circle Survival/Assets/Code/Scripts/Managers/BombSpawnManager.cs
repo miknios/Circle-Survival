@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 
-public class SpawnManager : MonoBehaviour
+//Gdy aktywny spawnuje na ekranie okresowo obiekty z RuntimeSetow
+//Jesli nie ma wolnego obiektu to nie spawnuje nic (kolejny nie zmiescilby sie na ekranie)
+public class BombSpawnManager : MonoBehaviour
 {
     public float SpawnTimer = 0;
 
@@ -8,6 +10,7 @@ public class SpawnManager : MonoBehaviour
     public RuntimeSet AvailableGreenBombs;
     public RuntimeSet AvailableBlackBombs;
 
+    //Wyczyszczenie setow z poprzednich wypelnien
     private void Awake()
     {
         AvailableBlackBombs.Clear();
@@ -26,14 +29,16 @@ public class SpawnManager : MonoBehaviour
 
     private void SpawnBomb()
     {
+        //Losowanie bomby do spawnu
         GameObject bombToSpawn = Random.Range(0f, 1f) > 0.2 ? AvailableGreenBombs.Get() : AvailableBlackBombs.Get();
-        if (bombToSpawn == null)
+        if (bombToSpawn == null)    //Jeśli nie ma wolnej bomby - zakończ
             return;
         float xPos;
         float yPos;
         float explodeTime = Random.Range(GameParameters.MinExplodeTime, GameParameters.MaxExplodeTime);
         float bombRadius = bombToSpawn.GetComponent<Transform>().localScale.x / 2.0f;
         bool spaceClear;
+        //Szukanie wolnego miejsca na ekranie
         do
         {
             xPos = Random.Range(
@@ -44,7 +49,7 @@ public class SpawnManager : MonoBehaviour
                 );
             spaceClear = Physics2D.OverlapCircle(new Vector2(xPos, yPos), bombRadius, 1 << 8) == null;
         } while (!spaceClear);
-
+        //Ustawienie parametrów bomby i aktywacja obiektu
         bombToSpawn.transform.position = new Vector2(xPos, yPos);
         bombToSpawn.GetComponent<BombController>().ExplodeTime = explodeTime;
         bombToSpawn.SetActive(true);

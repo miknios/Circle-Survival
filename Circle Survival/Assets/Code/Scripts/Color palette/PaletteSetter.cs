@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
+//Losuje palete z podanych w liscie i wypelnia SO kolorow ktorych uzywaja obiekty
 public class PaletteSetter : MonoBehaviour
 {
     public List<ColorPalette> palettes;

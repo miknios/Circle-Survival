@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
+//Umożliwia reagowanie na wzniesienie podanego GameEventu
 public class GameEventListener : MonoBehaviour
 {
     public GameEvent Event;

@@ -1,7 +1,7 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
+//Umożliwia pobranie, usunięcie i dodanie obiektu z listy i wyczyszczenie listy
 [CreateAssetMenu]
 public class RuntimeSet : ScriptableObject
 {

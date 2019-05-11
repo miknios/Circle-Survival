@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
+//Uzywane przez licznik punktow
+//Zapewnia metod kontroli tekstu wyswietlajacego punkty
 public class ScoreTextSetter : MonoBehaviour
 {
     public IntVariable Score;
     TextMeshProUGUI text;
 
-    void Start()
+    private void Awake()
     {
         text = GetComponent<TextMeshProUGUI>();
     }

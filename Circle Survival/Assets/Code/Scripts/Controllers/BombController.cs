@@ -1,38 +1,28 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
+//Kontrola timera bomby
+//Wywolanie odpowiednich Eventow
 public class BombController : MonoBehaviour
 {
+    bool timerActive;
     public float ExplodeTime;
     public float Timer;
     public UnityEvent OnTimerEnd;
     public UnityEvent OnTouch;
-    SpriteMask timerMask;
-    bool timerActive;
 
     public GameEvent ExplodeEvent;
-
-    void Awake()
-    {
-        timerMask = GetComponentInChildren<SpriteMask>();
-    }
 
     void Update()
     {
         if (timerActive)
         {
             Timer += Time.deltaTime;
-            SetMask(Timer / ExplodeTime);
             if (Timer >= ExplodeTime)
             {
                 OnTimerEnd.Invoke();
             }
         }
-    }
-
-    void SetMask(float amount)
-    {
-        timerMask.alphaCutoff = amount;
     }
 
     public void Defuse()
@@ -45,6 +35,12 @@ public class BombController : MonoBehaviour
         ExplodeEvent.Raise();
     }
 
+    public void Reset()
+    {
+        Timer = 0;
+        gameObject.SetActive(false);
+    }
+
     public void StartTimer()
     {
         timerActive = true;
@@ -53,12 +49,5 @@ public class BombController : MonoBehaviour
     void StopTimer()
     {
         timerActive = false;
-    }
-
-    public void Reset()
-    {
-        Timer = 0;
-        SetMask(0);
-        gameObject.SetActive(false);
     }
 }

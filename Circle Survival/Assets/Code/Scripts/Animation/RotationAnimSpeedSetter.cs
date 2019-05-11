@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+//Używany przez Score Background
+//Zmienia prędkość animacji w zależności od podanego SO FloatVariable
 public class RotationAnimSpeedSetter : MonoBehaviour
 {
     Animator animator;

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
 
+//Włącza Image komponent jeśli zdobyto highscore
 public class ShowHighscoreOnEnable : MonoBehaviour
 {
     Image image;

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using TMPro;
 
+//Używany przez licznik punktów
+//W momencie przekroczenia highscora zmienia kolor tekstu na podany
 public class CounterHighscoreColorSetter : MonoBehaviour
 {
     public ColorVariable Color;

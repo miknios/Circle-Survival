@@ -1,5 +1,9 @@
 ﻿using UnityEngine;
 
+//Obsługa systemu punktów
+//Ustawia na starcie SO Highscore na ten zapisany w PlayerPrefs
+//Aktualizuje SO Score na podstawie głównego Timera gry i powiadamia o zmianie punktów
+//Zapewnienie metod do zapisu, pobrania i zresetowania highscore
 public class ScoreManager : MonoBehaviour
 {
     public GameEvent ScoreChangeEvent;

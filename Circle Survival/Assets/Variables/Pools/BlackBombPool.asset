@@ -14,11 +14,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Prefab: {fileID: 7656885979984075177, guid: 0fd35aefe04ee7a4eb26dc9d428ddb23, type: 3}
   PoolSize: 7
-  GameObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

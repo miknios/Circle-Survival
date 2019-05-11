@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Udostepnia metode do cyklicznego ladowania kolejnej sceny
 public class NextSceneLoader : MonoBehaviour
 {
     public void LoadScene()

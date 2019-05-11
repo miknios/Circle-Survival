@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+//Sprawdza czy dotknięto bombę
+//Jeśli dotknięto to invokuje jej UnityEvent OnTouch
 public class BombHitTouchController : MonoBehaviour
 {
     void Update()

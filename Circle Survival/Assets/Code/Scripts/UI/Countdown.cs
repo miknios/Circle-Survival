@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
+//Na starcie odlicza zmieniając tekst
+//Na końcu wznosi CountdownEnd GameEvent
 public class Countdown : MonoBehaviour
 {
     TextMeshProUGUI countdownText;
 
-    public GameParameters GameParameters;
     public IntVariable CountdownTime;
     public GameEvent CountdownEnd;
 

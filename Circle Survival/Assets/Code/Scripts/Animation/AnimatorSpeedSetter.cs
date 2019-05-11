@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+//Ustawia na starcie predkosc animacji Animatora pomiedzy wybranym przedziałem
 public class AnimatorSpeedSetter : MonoBehaviour
 {
     public float MinSpeed = 1;

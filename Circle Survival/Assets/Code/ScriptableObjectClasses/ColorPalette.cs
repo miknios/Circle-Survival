@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+//Paleta kolorow do uzycia w grze
 [CreateAssetMenu]
 public class ColorPalette : ScriptableObject
 {

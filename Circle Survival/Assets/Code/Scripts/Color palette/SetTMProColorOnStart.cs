@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
 
+//Ustawia kolor TextMeshProUGUI na podany
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class SetTMProColorOnStart : MonoBehaviour
 {

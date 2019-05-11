@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class BombPoolManager : MonoBehaviour
+//na starcie tworzy obiekty na podstawie utworzonych wczesniej Pool SO
+public class PoolManager : MonoBehaviour
 {
     public Pool[] Pools;
 
@@ -8,14 +9,14 @@ public class BombPoolManager : MonoBehaviour
     {
         foreach(Pool pool in Pools)
         {
-            GameObject[] newObjects = new GameObject[pool.PoolSize];
+            //GameObject[] newObjects = new GameObject[pool.PoolSize];
             for(int i = 0; i < pool.PoolSize; i++)
             {
                 GameObject newBomb = Instantiate(pool.Prefab);
                 newBomb.SetActive(false);
-                newObjects[i] = newBomb;
+                //newObjects[i] = newBomb;
             }
-            pool.GameObjects = newObjects;
+            //pool.GameObjects = newObjects;
         }
     }
 }

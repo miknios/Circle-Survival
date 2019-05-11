@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
+//Używany przez Transition
+//Ustawia odpowiedni trigger Animatora
 public class SceneTransition : MonoBehaviour
 {
     Animator transitionAnimator;
