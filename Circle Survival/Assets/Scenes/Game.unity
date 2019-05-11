@@ -540,11 +540,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4554305421782691543, guid: be046ac6a45fbf344a8d515d45cef27b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4554305421782691371, guid: be046ac6a45fbf344a8d515d45cef27b,
         type: 3}
       propertyPath: m_LocalPosition.x

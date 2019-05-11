@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PaletteSetter : MonoBehaviour
 {
-    public List<Palette> palettes;
+    public List<ColorPalette> palettes;
 
     public ColorVariable FontColor;
     public ColorVariable BackgroundColor;
@@ -13,7 +13,7 @@ public class PaletteSetter : MonoBehaviour
 
     private void Awake()
     {
-        Palette drawnPalette = palettes[Random.Range(0, palettes.Count)];
+        ColorPalette drawnPalette = palettes[Random.Range(0, palettes.Count)];
 
         FontColor.color = drawnPalette.FontColor;
         BackgroundColor.color = drawnPalette.BackgroundColor;

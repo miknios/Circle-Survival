@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 4554305420731495468}
   - component: {fileID: 4554305420731495474}
   - component: {fileID: 3492183527283787718}
+  - component: {fileID: 616071208}
   m_Layer: 5
   m_Name: Score Text
   m_TagString: Untagged
@@ -390,6 +391,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 616071208}
+        m_MethodName: Set
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &4554305420731495474
@@ -434,6 +446,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Color: {fileID: 11400000, guid: 9a1ca1d0523167d429e1d417e43cdf06, type: 2}
+--- !u!114 &616071208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4554305420731495464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9700822a22420a44b03f5fe2375a825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Color: {fileID: 11400000, guid: c189e91ec3b1bc244942481dc51c7b2b, type: 2}
+  Score: {fileID: 11400000, guid: 492b70298b83dae4c970d68ee71c9d77, type: 2}
+  Highscore: {fileID: 11400000, guid: 2a73037734492324b92ab56467446b22, type: 2}
 --- !u!1 &4554305421782691543
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,7 +473,7 @@ GameObject:
   - component: {fileID: 4554305421782691370}
   - component: {fileID: 4554305421782691541}
   m_Layer: 5
-  m_Name: Background Canvas
+  m_Name: Background UI Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

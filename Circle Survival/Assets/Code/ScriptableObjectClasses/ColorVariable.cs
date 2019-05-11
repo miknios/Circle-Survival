@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu]
 public class ColorVariable : ScriptableObject
 {
-    public Color color;
+    public Color color = Color.white;
 }

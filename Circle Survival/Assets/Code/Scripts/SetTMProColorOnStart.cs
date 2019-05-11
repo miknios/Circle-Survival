@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 [RequireComponent(typeof(TextMeshProUGUI))]
-public class TMProColorSetter : MonoBehaviour
+public class SetTMProColorOnStart : MonoBehaviour
 {
     public ColorVariable Color;
     TextMeshProUGUI image;

@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palettes:
-  - {fileID: 11400000, guid: ea59ea356d9f3b6438c74e7205e1399c, type: 2}
+  - {fileID: 11400000, guid: c9e3590df4e6c364984a03ea7089e27b, type: 2}
   FontColor: {fileID: 11400000, guid: 231af950f5eb7bb41899e56800b6c5ae, type: 2}
   BackgroundColor: {fileID: 11400000, guid: f42489493e1c83e448bd75bae44d84cf, type: 2}
   CircleColor: {fileID: 11400000, guid: 9a1ca1d0523167d429e1d417e43cdf06, type: 2}

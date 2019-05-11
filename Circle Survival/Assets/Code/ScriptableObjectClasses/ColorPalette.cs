@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class Palette : ScriptableObject
+public class ColorPalette : ScriptableObject
 {
     public Color FontColor;
     public Color CircleColor;

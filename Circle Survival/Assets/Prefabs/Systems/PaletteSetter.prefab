@@ -50,6 +50,21 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 79a9c16ce7418f849abc6210ded0f2ad, type: 2}
   - {fileID: 11400000, guid: 8ae9cd595b3a0d54a8df2bb4d5ccb329, type: 2}
   - {fileID: 11400000, guid: ea59ea356d9f3b6438c74e7205e1399c, type: 2}
+  - {fileID: 11400000, guid: 73b9ace14111ba541a10929db049586f, type: 2}
+  - {fileID: 11400000, guid: 93e060124a812de499f48d1f4e3bc974, type: 2}
+  - {fileID: 11400000, guid: e81b07eb734ac1f4a8368013158014db, type: 2}
+  - {fileID: 11400000, guid: c3430636aa4655644aca6740d634633b, type: 2}
+  - {fileID: 11400000, guid: b4dadbcd04e399646bbdbce6030754e9, type: 2}
+  - {fileID: 11400000, guid: 0c4b2d5fb00f00342bad60ec342e0f78, type: 2}
+  - {fileID: 11400000, guid: e07946f78337f7248812f8594924a676, type: 2}
+  - {fileID: 11400000, guid: 5f4ca9b062df53b4aa36f431e1dea5c1, type: 2}
+  - {fileID: 11400000, guid: 14649e00f4c97b14ea82b1271e9afceb, type: 2}
+  - {fileID: 11400000, guid: cc477f8eed2bcc242ae1fb27ff04283e, type: 2}
+  - {fileID: 11400000, guid: 0c0b060b10bd6424aae0e0fb02010edb, type: 2}
+  - {fileID: 11400000, guid: f3d37cecd03bd594aace46ce160bdf74, type: 2}
+  - {fileID: 11400000, guid: 28c15d31ced9c3a49b4da41502cb2ec6, type: 2}
+  - {fileID: 11400000, guid: 25e3605e8d167a046a94ae91dd301901, type: 2}
+  - {fileID: 11400000, guid: c9e3590df4e6c364984a03ea7089e27b, type: 2}
   FontColor: {fileID: 11400000, guid: 231af950f5eb7bb41899e56800b6c5ae, type: 2}
   BackgroundColor: {fileID: 11400000, guid: f42489493e1c83e448bd75bae44d84cf, type: 2}
   CircleColor: {fileID: 11400000, guid: 9a1ca1d0523167d429e1d417e43cdf06, type: 2}
