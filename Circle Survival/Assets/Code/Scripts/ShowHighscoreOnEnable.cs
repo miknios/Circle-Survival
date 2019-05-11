@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ShowHighscoreOnEnable : MonoBehaviour
 {
-    TextMeshProUGUI text;
+    Image image;
     public IntVariable Score;
     public IntVariable Highscore;
 
     void Awake()
     {
-        text = GetComponent<TextMeshProUGUI>();
+        image = GetComponent<Image>();
     }
 
     private void OnEnable()
@@ -19,13 +20,6 @@ public class ShowHighscoreOnEnable : MonoBehaviour
 
     public void EnableOnHighscore()
     {
-        if(Score.Value == Highscore.Value)
-        {
-            text.text = "Highscore!";
-        }
-        else
-        {
-            text.text = "";
-        }
+        image.enabled = Score.Value == Highscore.Value;
     }
 }

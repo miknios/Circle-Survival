@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1011cd78dd4c4d245831c9b68ac10cde, type: 3}
   m_Name: BlackBombPool
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 9104551414646304348, guid: a09b3da2a5f007d4489ded7c9b796a66, type: 3}
+  Prefab: {fileID: 7656885979984075177, guid: 0fd35aefe04ee7a4eb26dc9d428ddb23, type: 3}
   PoolSize: 7
   GameObjects:
   - {fileID: 0}

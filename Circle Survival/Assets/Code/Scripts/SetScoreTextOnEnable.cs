@@ -15,6 +15,6 @@ public class SetScoreTextOnEnable : MonoBehaviour
 
     private void OnEnable()
     {
-        text.text = "Score: " + Score.Value;
+        text.text = "Score\n" + Score.Value;
     }
 }

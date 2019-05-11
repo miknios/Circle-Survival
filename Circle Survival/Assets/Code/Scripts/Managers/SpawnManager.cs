@@ -32,21 +32,18 @@ public class SpawnManager : MonoBehaviour
         float xPos;
         float yPos;
         float explodeTime = Random.Range(GameParameters.MinExplodeTime, GameParameters.MaxExplodeTime);
-        //TODO naprawic problem - po skonczeniu animacji bomby zostaje jej rozmiar ~= 0
-        //w tym momencie zhardcodowany bombsize
-        //float bombSize = bombToSpawn.GetComponent<SpriteRenderer>().bounds.size.x;
-        float bombSize = 1.5f;
-        //Debug.Log("Wielkosc bonby: " + bombSize);
+        float bombRadius = bombToSpawn.GetComponent<Transform>().localScale.x / 2.0f;
+        Debug.Log("Radius bonby: " + bombRadius);
         bool spaceClear;
         do
         {
             xPos = Random.Range(
-                Camera.main.ScreenToWorldPoint(Vector2.zero).x + bombSize / 2.0f, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - bombSize / 2.0f
+                Camera.main.ScreenToWorldPoint(Vector2.zero).x + bombRadius, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - bombRadius
                 );
             yPos = Random.Range(
-                Camera.main.ScreenToWorldPoint(Vector2.zero).y + bombSize / 2.0f, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y - bombSize / 2.0f
+                Camera.main.ScreenToWorldPoint(Vector2.zero).y + bombRadius, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y - bombRadius
                 );
-            spaceClear = Physics2D.OverlapCircle(new Vector2(xPos, yPos), 0.5f, 1 << 8) == null;
+            spaceClear = Physics2D.OverlapCircle(new Vector2(xPos, yPos), bombRadius, 1 << 8) == null;
         } while (!spaceClear);
 
         bombToSpawn.transform.position = new Vector2(xPos, yPos);

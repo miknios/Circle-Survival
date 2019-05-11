@@ -42,11 +42,10 @@ public class BombController : MonoBehaviour
 
     public void Explode()
     {
-        //TODO tutaj jakas animacja wybuchu czy cos
         ExplodeEvent.Raise();
     }
 
-    void StartTimer()
+    public void StartTimer()
     {
         timerActive = true;
     }
@@ -56,7 +55,7 @@ public class BombController : MonoBehaviour
         timerActive = false;
     }
 
-    void Reset()
+    public void Reset()
     {
         Timer = 0;
         SetMask(0);

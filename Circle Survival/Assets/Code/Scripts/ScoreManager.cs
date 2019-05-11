@@ -7,7 +7,7 @@ public class ScoreManager : MonoBehaviour
     public IntVariable Score;
     public IntVariable HighScore;
 
-    private void Start()
+    private void Awake()
     {
         HighScore.Value = GetHighScore();
     }
@@ -38,6 +38,8 @@ public class ScoreManager : MonoBehaviour
 
     public void ResetHighScore()
     {
+        HighScore.Value = 0;
         PlayerPrefs.SetInt("highscore", 0);
+        PlayerPrefs.Save();
     }
 }

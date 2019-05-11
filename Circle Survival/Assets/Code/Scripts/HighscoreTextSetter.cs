@@ -16,6 +16,11 @@ public class HighscoreTextSetter : MonoBehaviour
 
     private void Start()
     {
-        text.text = "Highscore: " + HighScore.Value;
+        SetHigscoreText();
+    }
+
+    public void SetHigscoreText()
+    {
+        text.text = HighScore.Value.ToString();
     }
 }
