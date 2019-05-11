@@ -318,26 +318,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1649589844 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7008796844037617026, guid: f790b0c2c5b647b4c8c3d8cc1e65488b,
-    type: 3}
-  m_PrefabInstance: {fileID: 9120135609014377371}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1649589845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649589844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f2add557aad675469211c37fd10ef42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Score: {fileID: 11400000, guid: 492b70298b83dae4c970d68ee71c9d77, type: 2}
-  Highscore: {fileID: 11400000, guid: 2a73037734492324b92ab56467446b22, type: 2}
 --- !u!20 &2089232048 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8581969017918579531, guid: cf5158308d1ae7c419970fa2e88b738c,
@@ -1071,33 +1051,6 @@ PrefabInstance:
     - target: {fileID: 9120135610855542923, guid: f790b0c2c5b647b4c8c3d8cc1e65488b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 981099916, guid: f790b0c2c5b647b4c8c3d8cc1e65488b, type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 981099916, guid: f790b0c2c5b647b4c8c3d8cc1e65488b, type: 3}
-      propertyPath: m_MatchWidthOrHeight
-      value: 0.713
-      objectReference: {fileID: 0}
-    - target: {fileID: 7008796843165221401, guid: f790b0c2c5b647b4c8c3d8cc1e65488b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6813703339545822299, guid: f790b0c2c5b647b4c8c3d8cc1e65488b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7008796844274535629, guid: f790b0c2c5b647b4c8c3d8cc1e65488b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 463915504, guid: f790b0c2c5b647b4c8c3d8cc1e65488b, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

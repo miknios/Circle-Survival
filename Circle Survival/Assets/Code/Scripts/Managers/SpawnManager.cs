@@ -33,7 +33,6 @@ public class SpawnManager : MonoBehaviour
         float yPos;
         float explodeTime = Random.Range(GameParameters.MinExplodeTime, GameParameters.MaxExplodeTime);
         float bombRadius = bombToSpawn.GetComponent<Transform>().localScale.x / 2.0f;
-        Debug.Log("Radius bonby: " + bombRadius);
         bool spaceClear;
         do
         {

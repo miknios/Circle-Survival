@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3062b0a803caaa6449070eddbaf1aa93, type: 3}
   m_Name: 02
   m_EditorClassIdentifier: 
-  FontColor: {r: 1, g: 0.3647059, b: 0.4509804, a: 1}
+  FontColor: {r: 0.90588236, g: 0.8784314, b: 0.54509807, a: 1}
   CircleColor: {r: 0.4862745, g: 0.47843137, b: 0.47843137, a: 1}
   BackgroundColor: {r: 1, g: 1, b: 1, a: 1}
-  HighscoreColor: {r: 0.90588236, g: 0.8784314, b: 0.54509807, a: 1}
+  HighscoreColor: {r: 1, g: 0.3647059, b: 0.4509804, a: 1}
