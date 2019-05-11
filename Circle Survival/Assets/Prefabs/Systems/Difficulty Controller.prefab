@@ -46,9 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Parameters: {fileID: 11400000, guid: e69a4a520202ae8468a13485fa4b8f9e, type: 2}
   Score: {fileID: 11400000, guid: 492b70298b83dae4c970d68ee71c9d77, type: 2}
-  MinExplodeTime: 0
-  MaxExplodeTime: 0
-  Spawntime: 0
+  MinExplodeTimeFactor: 0.99
+  MaxExplodeTimeFactor: 0.99
+  SpawnTimeFactor: 0.98
 --- !u!114 &867216622
 MonoBehaviour:
   m_ObjectHideFlags: 0

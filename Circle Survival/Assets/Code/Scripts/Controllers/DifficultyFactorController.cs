@@ -8,7 +8,7 @@ public class DifficultyFactorController : MonoBehaviour
 
     public float MinExplodeTimeFactor = 0.99f;
     public float MaxExplodeTimeFactor = 0.99f;
-    public float SpawnTimeFactor = 0.97f;
+    public float SpawnTimeFactor = 0.98f;
 
     //Nowy poziom zależy od aktualnej wartości i podanego factora
     public void UpdateSpawnAndExplodeTimes()
