@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1011cd78dd4c4d245831c9b68ac10cde, type: 3}
-  m_Name: BlackBombPool
+  m_Script: {fileID: 11500000, guid: a7cd1d168d2e5ba41bbbd6ca67c186d1, type: 3}
+  m_Name: 22
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 7656885979984075177, guid: 0fd35aefe04ee7a4eb26dc9d428ddb23, type: 3}
-  PoolSize: 4
+  FontColor: {r: 0, g: 0, b: 0, a: 1}
+  CircleColor: {r: 0, g: 0, b: 0, a: 0}
+  BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
+  HighscoreColor: {r: 0, g: 0, b: 0, a: 0}
