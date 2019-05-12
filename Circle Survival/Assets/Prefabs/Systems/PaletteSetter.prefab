@@ -65,6 +65,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 28c15d31ced9c3a49b4da41502cb2ec6, type: 2}
   - {fileID: 11400000, guid: 25e3605e8d167a046a94ae91dd301901, type: 2}
   - {fileID: 11400000, guid: c9e3590df4e6c364984a03ea7089e27b, type: 2}
+  - {fileID: 11400000, guid: 654a02628910a124a95eed6592fdbf44, type: 2}
+  - {fileID: 11400000, guid: 3c57cf924094314489e264ddae671199, type: 2}
+  - {fileID: 11400000, guid: ec8345e374a75c34592862a3726d3c40, type: 2}
+  - {fileID: 11400000, guid: fabf681204480394b97300eefb2f8a4d, type: 2}
+  - {fileID: 11400000, guid: 2fcd7534cd1d4734cbeda4db51cbaecb, type: 2}
+  - {fileID: 11400000, guid: aa34f852a26379f4b9ee6b74337cb573, type: 2}
+  - {fileID: 11400000, guid: 30134d0d7da56494c8a6cd76cf658e45, type: 2}
+  - {fileID: 11400000, guid: 522fb03d78e52a94b968020c296afe82, type: 2}
+  - {fileID: 11400000, guid: c765eb5c8316c8140a5745caac9c21f7, type: 2}
   FontColor: {fileID: 11400000, guid: 231af950f5eb7bb41899e56800b6c5ae, type: 2}
   BackgroundColor: {fileID: 11400000, guid: f42489493e1c83e448bd75bae44d84cf, type: 2}
   CircleColor: {fileID: 11400000, guid: 9a1ca1d0523167d429e1d417e43cdf06, type: 2}

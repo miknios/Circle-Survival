@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7cd1d168d2e5ba41bbbd6ca67c186d1, type: 3}
-  m_Name: 22
+  m_Name: 26
   m_EditorClassIdentifier: 
-  FontColor: {r: 0.6313726, g: 0.93725497, b: 0.54509807, a: 1}
-  CircleColor: {r: 0.4666667, g: 0.1764706, b: 0.54509807, a: 1}
-  BackgroundColor: {r: 0.82745105, g: 0.96470594, b: 0.8588236, a: 1}
-  HighscoreColor: {r: 0.9960785, g: 0.37254903, b: 0.33333334, a: 1}
+  FontColor: {r: 0.9686275, g: 0.92549026, b: 0.882353, a: 1}
+  CircleColor: {r: 0.5529412, g: 0.5254902, b: 0.78823537, a: 1}
+  BackgroundColor: {r: 0.79215693, g: 0.7686275, b: 0.8078432, a: 1}
+  HighscoreColor: {r: 0.5764706, g: 0.18431373, b: 0.427451, a: 1}

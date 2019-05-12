@@ -30,7 +30,7 @@ public class BombSpawnManager : MonoBehaviour
     private void SpawnBomb()
     {
         //Losowanie bomby do spawnu
-        GameObject bombToSpawn = Random.Range(0f, 1f) > 0.2 ? AvailableGreenBombs.Get() : AvailableBlackBombs.Get();
+        GameObject bombToSpawn = Random.Range(0f, 1f) > 0.15 ? AvailableGreenBombs.Get() : AvailableBlackBombs.Get();
         if (bombToSpawn == null)    //Jeśli nie ma wolnej bomby - zakończ
             return;
         float xPos;

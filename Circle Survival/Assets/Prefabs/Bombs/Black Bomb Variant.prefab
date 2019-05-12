@@ -67,6 +67,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5386172023933449118, guid: c296463095270ca448d3bc2be980a00c,
+        type: 3}
+      propertyPath: Set
+      value: 
+      objectReference: {fileID: 11400000, guid: 599c61b5db2e69d4d87e8924f48b1326,
+        type: 2}
+    - target: {fileID: 5386172023933449119, guid: c296463095270ca448d3bc2be980a00c,
+        type: 3}
+      propertyPath: set
+      value: 
+      objectReference: {fileID: 11400000, guid: 599c61b5db2e69d4d87e8924f48b1326,
+        type: 2}
     - target: {fileID: 5386172023933449117, guid: c296463095270ca448d3bc2be980a00c,
         type: 3}
       propertyPath: OnTouch.m_PersistentCalls.m_Calls.Array.size
@@ -132,18 +144,6 @@ PrefabInstance:
       propertyPath: OnTimerEnd.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 5386172023933449118, guid: c296463095270ca448d3bc2be980a00c,
-        type: 3}
-      propertyPath: Set
-      value: 
-      objectReference: {fileID: 11400000, guid: 599c61b5db2e69d4d87e8924f48b1326,
-        type: 2}
-    - target: {fileID: 5386172023933449119, guid: c296463095270ca448d3bc2be980a00c,
-        type: 3}
-      propertyPath: set
-      value: 
-      objectReference: {fileID: 11400000, guid: 599c61b5db2e69d4d87e8924f48b1326,
-        type: 2}
     - target: {fileID: 3966752746562304322, guid: c296463095270ca448d3bc2be980a00c,
         type: 3}
       propertyPath: m_Color.r
@@ -158,6 +158,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.24528301
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966752746509792854, guid: c296463095270ca448d3bc2be980a00c,
+        type: 3}
+      propertyPath: m_MaskAlphaCutoff
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c296463095270ca448d3bc2be980a00c, type: 3}
