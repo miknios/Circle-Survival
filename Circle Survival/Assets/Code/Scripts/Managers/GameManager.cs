@@ -6,6 +6,7 @@
 public class GameManager : MonoBehaviour
 {
     bool gameRunning;
+    bool gamePaused;
 
     public FloatVariable Timer;
     public IntVariable Score;
@@ -47,5 +48,25 @@ public class GameManager : MonoBehaviour
             gameRunning = false;
             GameEndEvent.Raise();
         }
+    }
+
+    public void ToggleGamePause()
+    {
+        if (gamePaused)
+            ResumeGame();
+        else
+            PauseGame();
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
+        gamePaused = false;
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+        gamePaused = true;
     }
 }

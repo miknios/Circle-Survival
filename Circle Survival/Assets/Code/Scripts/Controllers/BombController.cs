@@ -17,11 +17,11 @@ public class BombController : MonoBehaviour
     {
         if (timerActive)
         {
-            Timer += Time.deltaTime;
             if (Timer >= ExplodeTime)
             {
                 OnTimerEnd.Invoke();
             }
+            Timer += Time.deltaTime;
         }
     }
 

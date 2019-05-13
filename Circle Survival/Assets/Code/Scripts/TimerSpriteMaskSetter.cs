@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-//Ustawia SpriteMask na podstawie aktualnej wartosci timera z BombController
+//Ustawia SpriteMask na podstawie aktualnej wartosci timera z komponentu BombController rodzica
+[RequireComponent(typeof(SpriteMask))]
 public class TimerSpriteMaskSetter : MonoBehaviour
 {
     BombController controller;
