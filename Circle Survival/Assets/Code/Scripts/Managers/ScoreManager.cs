@@ -27,7 +27,7 @@ public class ScoreManager : MonoBehaviour
 
     public int GetHighScore()
     {
-        return PlayerPrefs.GetInt("highscore");
+        return PlayerPrefs.GetInt("highscore", 0);
     }
 
     public void SaveHighScore()

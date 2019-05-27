@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-//Wywolanie odpowiednich metod BombControllera w zaleznosci od AnimationEventow
+//Udostepnienie animatorowi odpowiednich metod BombControllera
 public class BombAnimationEventListener : MonoBehaviour
 {
     BombController bombController;

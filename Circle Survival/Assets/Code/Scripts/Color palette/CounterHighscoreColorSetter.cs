@@ -3,6 +3,7 @@ using TMPro;
 
 //Używany przez licznik punktów
 //W momencie przekroczenia highscora zmienia kolor tekstu na podany
+[RequireComponent(typeof(TextMeshProUGUI))]
 public class CounterHighscoreColorSetter : MonoBehaviour
 {
     public ColorVariable Color;

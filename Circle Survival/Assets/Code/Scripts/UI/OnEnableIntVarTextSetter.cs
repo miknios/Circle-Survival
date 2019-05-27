@@ -3,6 +3,7 @@ using TMPro;
 
 //Używane przez highscore w głównym menu i score po przegranej
 //Ustawia text na wartosc podanego IntVar
+[RequireComponent(typeof(TextMeshProUGUI))]
 public class OnEnableIntVarTextSetter : MonoBehaviour
 {
     public IntVariable IntVar;

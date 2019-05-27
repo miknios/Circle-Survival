@@ -4,6 +4,7 @@ using TMPro;
 
 //Na starcie odlicza zmieniając tekst
 //Na końcu wznosi CountdownEnd GameEvent
+[RequireComponent(typeof(TextMeshProUGUI))]
 public class Countdown : MonoBehaviour
 {
     TextMeshProUGUI countdownText;

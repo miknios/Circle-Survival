@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 
 //Włącza Image komponent jeśli zdobyto highscore
+[RequireComponent(typeof(Image))]
 public class ShowHighscoreOnEnable : MonoBehaviour
 {
     Image image;

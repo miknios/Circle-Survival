@@ -4,7 +4,6 @@
 public class DifficultyFactorController : MonoBehaviour
 {
     public GameParameters Parameters;
-    public IntVariable Score;
 
     public float MinExplodeTimeFactor = 0.99f;
     public float MaxExplodeTimeFactor = 0.99f;

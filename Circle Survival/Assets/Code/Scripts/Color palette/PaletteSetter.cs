@@ -4,7 +4,7 @@ using UnityEngine;
 //Losuje palete z podanych w liscie i wypelnia SO kolorow ktorych uzywaja obiekty
 public class PaletteSetter : MonoBehaviour
 {
-    public List<ColorPalette> palettes;
+    public List<ColorPalette> Palettes;
 
     public ColorVariable FontColor;
     public ColorVariable BackgroundColor;
@@ -13,7 +13,7 @@ public class PaletteSetter : MonoBehaviour
 
     private void Awake()
     {
-        ColorPalette drawnPalette = palettes[Random.Range(0, palettes.Count)];
+        ColorPalette drawnPalette = Palettes[Random.Range(0, Palettes.Count)];
 
         FontColor.color = drawnPalette.FontColor;
         BackgroundColor.color = drawnPalette.BackgroundColor;
