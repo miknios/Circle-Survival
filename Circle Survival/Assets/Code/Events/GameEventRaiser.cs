@@ -5,8 +5,5 @@ public class GameEventRaiser : MonoBehaviour
 {
     public GameEvent gameEvent;
 
-    public void Raise()
-    {
-        gameEvent.Raise();
-    }
+    public void Raise() => gameEvent.Raise();
 }

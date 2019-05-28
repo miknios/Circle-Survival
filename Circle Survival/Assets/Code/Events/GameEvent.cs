@@ -16,13 +16,7 @@ public class GameEvent : ScriptableObject
         }
     }
 
-    public void RegisterListener(GameEventListener listener)
-    {
-        listeners.Add(listener);
-    }
+    public void RegisterListener(GameEventListener listener) => listeners.Add(listener);
 
-    public void UnregisterListener(GameEventListener listener)
-    {
-        listeners.Remove(listener);
-    }
+    public void UnregisterListener(GameEventListener listener) => listeners.Remove(listener);
 }
