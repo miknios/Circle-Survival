@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3615476377725395952}
   - component: {fileID: 3615476377725395727}
   - component: {fileID: 7674093938130565445}
-  - component: {fileID: 4057557703046297797}
+  - component: {fileID: 1601951818}
+  - component: {fileID: 1601951819}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -52,7 +53,6 @@ MonoBehaviour:
   Parameters: {fileID: 11400000, guid: e69a4a520202ae8468a13485fa4b8f9e, type: 2}
   GameStartEvent: {fileID: 11400000, guid: d03a9a5c89aa10e469dd9115ea8ddaba, type: 2}
   GameEndEvent: {fileID: 11400000, guid: ed79b5496aa22944fb04b250156baaae, type: 2}
-  CountdownEndEvent: {fileID: 11400000, guid: 6aec2df44835b9f448aa8587b62569b5, type: 2}
 --- !u!114 &3615476377725395727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &4057557703046297797
+--- !u!114 &1601951818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,12 +123,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1145c53b51dce4cbd7117f27fcfc67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 349892f9add662d48b3e117f18742dc0, type: 2}
+  Event: {fileID: 11400000, guid: 2a68ea3c14f08fb48855ac5fed5afa3f, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3615476377725395952}
-        m_MethodName: UpdateSpawnAndExplodeTimes
+        m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1601951819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3615476377725395725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb1145c53b51dce4cbd7117f27fcfc67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: b96beae3cd662c2419e4356f3c97e52f, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3615476377725395952}
+        m_MethodName: PauseGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

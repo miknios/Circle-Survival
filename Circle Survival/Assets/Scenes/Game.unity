@@ -339,70 +339,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1601951817 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3615476377725395725, guid: d6e12104005d2904b8a27b9b7180c30b,
-    type: 3}
-  m_PrefabInstance: {fileID: 3615476378055597168}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1601951818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1601951817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb1145c53b51dce4cbd7117f27fcfc67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 2a68ea3c14f08fb48855ac5fed5afa3f, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3615476378055597170}
-        m_MethodName: ResumeGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1601951819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1601951817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb1145c53b51dce4cbd7117f27fcfc67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: b96beae3cd662c2419e4356f3c97e52f, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3615476378055597170}
-        m_MethodName: PauseGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!20 &2089232048 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8581969017918579531, guid: cf5158308d1ae7c419970fa2e88b738c,
@@ -1095,18 +1031,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3615476378055597168}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3615476378055597170 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3615476377725395952, guid: d6e12104005d2904b8a27b9b7180c30b,
-    type: 3}
-  m_PrefabInstance: {fileID: 3615476378055597168}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1601951817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c410b611c7928b94db92ad8ec5dd1b46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7668390495776066159
 PrefabInstance:
   m_ObjectHideFlags: 0
